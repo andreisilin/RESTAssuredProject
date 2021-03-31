@@ -1,0 +1,268 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-30T17:47:59.525Z",
+        "line": 15,
+        "name": "Verify is Place being added using AddPlace API",
+        "description": "",
+        "id": "validating-place-api-s;verify-is-place-being-added-using-addplace-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 889868000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "addPlace payload with \"Leshka\" \"Viliams 18\" \"Russian-EN\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Leshka\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Viliams 18\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"Russian-EN\"",
+                  "offset": 44
+                }
+              ],
+              "location": "stepDefinition.AddPlaceDefinition.addPlace_payload_with(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4901000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user calls \"AddPlaceResource\" API with \"POST\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceResource\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 39
+                }
+              ],
+              "location": "stepDefinition.AddPlaceDefinition.user_calls_API_with_POST_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "response is successful with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinition.AddPlaceDefinition.response_is_successful_with_status_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 940000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinition.AddPlaceDefinition.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinition.AddPlaceDefinition.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1048000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "verify place_id is created maps to \"Leshka\" using \"GetPlaceRecourse\" API",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Leshka\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"GetPlaceRecourse\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinition.AddPlaceDefinition.verify_place_id_is_created_maps_to_using_api(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlace"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-30T18:02:56.442Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Verify delete functionality",
+        "description": "",
+        "id": "validating-place-api-s;verify-delete-functionality",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "deletePlace payload",
+            "match": {
+              "location": "stepDefinition.AddPlaceDefinition.deletePlace_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1004000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user calls \"DeletePlaceResources\" API with \"POST\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeletePlaceResources\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinition.AddPlaceDefinition.user_calls_API_with_POST_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "response is successful with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinition.AddPlaceDefinition.response_is_successful_with_status_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 42000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinition.AddPlaceDefinition.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlace"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place API\u0027s",
+    "description": "",
+    "id": "validating-place-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/PlaceValidations.feature",
+    "tags": []
+  }
+]
